@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aizel Mendoza | Portfolio</title>
+  <title>Aizel Rose N. Mendoza | Tourism Management Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo">Aizel Mendoza</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+        <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -32,7 +36,7 @@
         <a href="#about" class="btn">Get to Know Me</a>
       </div>
       <div class="home-image fade-in-right">
-        <img src="profile.jpg" alt="Aizel Mendoza Profile" />
+        <img src="profile.jpg" alt="Aizel Rose N. Mendoza Profile" />
       </div>
     </div>
   </section>
@@ -42,11 +46,27 @@
     <h2>About Me</h2>
     <div class="about-container">
       <p>
-        Hello! I’m <strong>Aizel Mendoza</strong>, a Tourism Management student driven by my love for travel,
-        culture, and hospitality. I enjoy exploring how tourism connects people, promotes local culture,
+        Hello! I'm <strong>Aizel Rose N. Mendoza</strong>, a 19-year-old Tourism Management student driven by my love for travel,
+        culture, and hospitality. Currently in my 2nd year pursuing a <strong>Bachelor of Science in Tourism Management (BSTM)</strong> at <strong>Bestlink College of the Philippines</strong>, 
+        I am dedicated to building a career in the dynamic world of tourism and hospitality.
+      </p>
+      <p>
+        I enjoy exploring how tourism connects people, promotes local culture,
         and creates unforgettable memories. My passion lies in providing excellent service and
         ensuring every guest feels valued and welcomed.
       </p>
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>Education</h3>
+          <p>BSTM - 2nd Year</p>
+          <p class="small">Bestlink College of the Philippines</p>
+        </div>
+        <div class="info-box">
+          <h3>Location</h3>
+          <p>Deparo, Caloocan City</p>
+          <p class="small">Philippines</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -115,7 +135,7 @@
   <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Let’s connect! Feel free to reach out through any of the platforms below.</p>
+    <p>Let's connect! Feel free to reach out through any of the platforms below.</p>
     <div class="contact-links">
       <a href="mailto:mendozaaizel6@gmail.com" class="btn">📧 Gmail</a>
       <a href="https://www.facebook.com/aizel.nolial.mendoza" target="_blank" class="btn">🌐 Facebook</a>
@@ -125,10 +145,9 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Aizel Mendoza. All rights reserved.</p>
+    <p>&copy; 2025 Aizel Rose N. Mendoza. All rights reserved.</p>
   </footer>
 
-  <!-- MODAL SCRIPT -->
   <script>
     function openModal(id) {
       document.getElementById(id).style.display = "block";
@@ -136,7 +155,14 @@
     function closeModal(id) {
       document.getElementById(id).style.display = "none";
     }
-    // Close modal when clicking outside content
+    function toggleMobileMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+    function closeMobileMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.remove('active');
+    }
     window.onclick = function(event) {
       const modals = document.querySelectorAll('.modal');
       modals.forEach(modal => {
