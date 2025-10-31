@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aizel Mendoza | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Aizel Mendoza</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="home-container">
+      <div class="home-text">
+        <h1 class="fade-in">Hi, I'm <span>Aizel Mendoza</span></h1>
+        <p class="fade-in-delay">
+          A passionate <strong>Bachelor of Science in Tourism Management</strong> student
+          aspiring to make a mark in the hospitality and tourism industry by promoting creativity,
+          professionalism, and meaningful guest experiences.
+        </p>
+        <a href="#about" class="btn">Get to Know Me</a>
+      </div>
+      <div class="home-image fade-in-right">
+        <img src="profile.jpg" alt="Aizel Mendoza Profile" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <p>
+        Hello! I’m <strong>Aizel Mendoza</strong>, a Tourism Management student driven by my love for travel,
+        culture, and hospitality. I enjoy exploring how tourism connects people, promotes local culture,
+        and creates unforgettable memories. My passion lies in providing excellent service and
+        ensuring every guest feels valued and welcomed.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>My Skills & Interests</h2>
+    <div class="skills-container">
+      <div class="skill-box" onclick="openModal('hospitality')">Hospitality & Guest Relations</div>
+      <div class="skill-box" onclick="openModal('event')">Event Coordination</div>
+      <div class="skill-box" onclick="openModal('promotion')">Tourism Promotion</div>
+      <div class="skill-box" onclick="openModal('culture')">Cultural Awareness</div>
+      <div class="skill-box" onclick="openModal('service')">Customer Service</div>
+      <div class="skill-box" onclick="openModal('planning')">Travel Planning</div>
+    </div>
+  </section>
+
+  <!-- MODALS -->
+  <div id="hospitality" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('hospitality')">&times;</span>
+      <h3>Hospitality & Guest Relations</h3>
+      <p>Skilled in providing exceptional service to guests, ensuring comfort, satisfaction, and positive experiences.</p>
+    </div>
+  </div>
+
+  <div id="event" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('event')">&times;</span>
+      <h3>Event Coordination</h3>
+      <p>Experienced in planning, organizing, and executing events with attention to detail, logistics, and teamwork.</p>
+    </div>
+  </div>
+
+  <div id="promotion" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('promotion')">&times;</span>
+      <h3>Tourism Promotion</h3>
+      <p>Knowledgeable in promoting destinations and tourism services to attract visitors and enhance local engagement.</p>
+    </div>
+  </div>
+
+  <div id="culture" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('culture')">&times;</span>
+      <h3>Cultural Awareness</h3>
+      <p>Understanding and appreciating diverse cultures to provide inclusive and respectful experiences for all guests.</p>
+    </div>
+  </div>
+
+  <div id="service" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('service')">&times;</span>
+      <h3>Customer Service</h3>
+      <p>Providing attentive, friendly, and solution-oriented service to meet guest needs efficiently.</p>
+    </div>
+  </div>
+
+  <div id="planning" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('planning')">&times;</span>
+      <h3>Travel Planning</h3>
+      <p>Organizing travel itineraries and logistics to create smooth and enjoyable experiences for clients or guests.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s connect! Feel free to reach out through any of the platforms below.</p>
+    <div class="contact-links">
+      <a href="mailto:mendozaaizel6@gmail.com" class="btn">📧 Gmail</a>
+      <a href="https://www.facebook.com/aizel.nolial.mendoza" target="_blank" class="btn">🌐 Facebook</a>
+      <a href="https://www.instagram.com/fheyyyyyy/" target="_blank" class="btn">📸 Instagram</a>
+      <a href="tel:+639933866998" class="btn">📞 0993 386 6998</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aizel Mendoza. All rights reserved.</p>
+  </footer>
+
+  <!-- MODAL SCRIPT -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    // Close modal when clicking outside content
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if(event.target === modal) modal.style.display = "none";
+      });
+    }
+  </script>
+</body>
+</html>
